@@ -11,3 +11,6 @@ class candidate_data(models.Model):
       party=models.CharField(max_length=50)
       cast_support=models.CharField(max_length=50)
       campaigns=models.CharField(max_length=10)
+      
+def __unicode__(self):
+      return str(self.name)
