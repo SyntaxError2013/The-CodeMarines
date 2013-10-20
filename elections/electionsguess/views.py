@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from electionsguess.trial import constituencies 
+
+
 def search_constituencies(request,place):
+
   flag=0 
   for constituency in constituencies:
      if place == constituency:
@@ -87,3 +90,21 @@ def search_constituencies(request,place):
   else:
     return redirect("earlierview")
 
+def home_page(request){
+ html="<!DOCTYPE html>
+  <html>
+ <head>
+ <title>Home Page</title>
+ <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+</head>
+<body>
+ <div class = "container">
+  <h1>Elections</h1>
+   <form action="url1" method="get">
+    Constituency name:<input type="text" name = "constituency">
+     <button type="submit" value="submit" class = "btn btn-primary">Submit</button>
+      </form>
+       </div>
+       </body>
+       </html>"
+ return HttpResponse(html)
