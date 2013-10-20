@@ -9,7 +9,7 @@ def search_constituencies(request,place):
     raise Http404()
   
 
-def home_page(request, page){
+def home_page(request){
   try:
     return direct_to_template(request, template='homepage.html' %page)
   except TemplateDoesNotExist:
