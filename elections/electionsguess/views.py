@@ -83,5 +83,7 @@ def search_constituencies(request,place):
                       </div>
                        </body>
                         </html> "
-  return HttpResponse(html)
+    return HttpResponse(html)
+  else:
+    return redirect("earlierview")
 
