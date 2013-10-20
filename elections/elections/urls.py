@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 urlpatterns = patterns('django.views.generic.simple',
     # Examples:
     url(r'^$', TemplateView.as_view(template_name="homepage.html")),
-    # url(r'^elections/', include('elections.foo.urls')),
+    url(r'^fillup*',TemplateView.as_view(template_name="fillupform.html")) ,
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
