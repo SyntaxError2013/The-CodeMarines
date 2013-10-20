@@ -10,6 +10,7 @@ def search_constituencies(request,place):
        flag=1
   if flag==1:
     html= "<!DOCTYPE html>
+    <html>
  <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <title>SEARCH</title>
